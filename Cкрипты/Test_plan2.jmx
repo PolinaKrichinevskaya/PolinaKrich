@@ -21,6 +21,8 @@
           </elementProp>
         </collectionProp>
       </elementProp>
+      <boolProp name="TestPlan.functional_mode">false</boolProp>
+      <boolProp name="TestPlan.serialize_threadgroups">false</boolProp>
     </TestPlan>
     <hashTree>
       <CookieManager guiclass="CookiePanel" testclass="CookieManager" testname="HTTP Cookie Manager">
@@ -29,7 +31,7 @@
         <boolProp name="CookieManager.controlledByThreadGroup">false</boolProp>
       </CookieManager>
       <hashTree/>
-      <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="user_cred">
+      <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="user_cred" enabled="true">
         <stringProp name="delimiter">,</stringProp>
         <stringProp name="fileEncoding">UTF-8</stringProp>
         <stringProp name="filename">Login,Password,address1,address2,pass1,arrive,depart.csv</stringProp>
@@ -41,7 +43,7 @@
         <stringProp name="variableNames">Login,Password,address1,address2,pass1,arrive,depart</stringProp>
       </CSVDataSet>
       <hashTree/>
-      <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="seat_info">
+      <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="seat_info" enabled="true">
         <stringProp name="filename">expDate,creditCard,seatType,seatPref.csv</stringProp>
         <stringProp name="fileEncoding">UTF-8</stringProp>
         <stringProp name="variableNames">expDate,creditCard,seatType,seatPref</stringProp>
@@ -55,7 +57,7 @@
       <hashTree/>
       <TestFragmentController guiclass="TestFragmentControllerGui" testclass="TestFragmentController" testname="Скрипты_WebTours" enabled="true"/>
       <hashTree>
-        <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="UC01_Логин"/>
+        <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="UC01_Логин" enabled="true"/>
         <hashTree>
           <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="UC01_01_Домашняя_страница" enabled="true">
             <boolProp name="TransactionController.includeTimers">false</boolProp>
@@ -593,7 +595,7 @@
               <hashTree/>
             </hashTree>
           </hashTree>
-          <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="UC01_03_Выход">
+          <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="UC01_03_Выход" enabled="true">
             <boolProp name="TransactionController.includeTimers">false</boolProp>
           </TransactionController>
           <hashTree>
@@ -679,13 +681,13 @@
               <hashTree/>
             </hashTree>
           </hashTree>
-          <TestAction guiclass="TestActionGui" testclass="TestAction" testname="pacing">
+          <TestAction guiclass="TestActionGui" testclass="TestAction" testname="pacing" enabled="true">
             <intProp name="ActionProcessor.action">1</intProp>
             <intProp name="ActionProcessor.target">0</intProp>
             <stringProp name="ActionProcessor.duration">0</stringProp>
           </TestAction>
           <hashTree>
-            <ConstantThroughputTimer guiclass="TestBeanGUI" testclass="ConstantThroughputTimer" testname="Constant Throughput Timer">
+            <ConstantThroughputTimer guiclass="TestBeanGUI" testclass="ConstantThroughputTimer" testname="Constant Throughput Timer" enabled="true">
               <intProp name="calcMode">0</intProp>
               <doubleProp>
                 <name>throughput</name>
@@ -696,7 +698,7 @@
             <hashTree/>
           </hashTree>
         </hashTree>
-        <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="UC02_Поиск_билета_без_оплаты"/>
+        <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="UC02_Поиск_билета_без_оплаты" enabled="true"/>
         <hashTree>
           <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="UC03_01_Домашняя_страница" enabled="true">
             <boolProp name="TransactionController.includeTimers">false</boolProp>
@@ -1971,7 +1973,7 @@
             <hashTree/>
           </hashTree>
         </hashTree>
-        <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="UC03_Покупка_билета"/>
+        <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="UC03_Покупка_билета" enabled="true"/>
         <hashTree>
           <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="UC03_01_Домашняя_страница" enabled="true">
             <boolProp name="TransactionController.includeTimers">false</boolProp>
@@ -3449,7 +3451,7 @@
             <hashTree/>
           </hashTree>
         </hashTree>
-        <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="UC04_Просмотр_списка_путевых_листов"/>
+        <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="UC04_Просмотр_списка_путевых_листов" enabled="true"/>
         <hashTree>
           <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="UC04_01_Домашняя_страница" enabled="true">
             <boolProp name="TransactionController.includeTimers">false</boolProp>
@@ -4411,7 +4413,7 @@
             <hashTree/>
           </hashTree>
         </hashTree>
-        <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="UC05_Удаление_существующего_бронирования"/>
+        <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="UC05_Удаление_существующего_бронирования" enabled="true"/>
         <hashTree>
           <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="UC05_01_Домашняя_страница" enabled="true">
             <boolProp name="TransactionController.includeTimers">false</boolProp>
@@ -5516,7 +5518,7 @@ vars.put(&quot;cgifields_list&quot;,cgifields);
             <hashTree/>
           </hashTree>
         </hashTree>
-        <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="UC06_Регистрация_пользователя"/>
+        <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="UC06_Регистрация_пользователя" enabled="true"/>
         <hashTree>
           <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="UC06_01_Домашняя_страница" enabled="true">
             <boolProp name="TransactionController.includeTimers">false</boolProp>
@@ -5997,7 +5999,7 @@ vars.put(&quot;cgifields_list&quot;,cgifields);
               <hashTree/>
             </hashTree>
           </hashTree>
-          <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="UC06_04_Переход_в_личный_кабинет">
+          <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="UC06_04_Переход_в_личный_кабинет" enabled="true">
             <boolProp name="TransactionController.includeTimers">false</boolProp>
           </TransactionController>
           <hashTree>
@@ -6252,7 +6254,7 @@ vars.put(&quot;cgifields_list&quot;,cgifields);
               <hashTree/>
             </hashTree>
           </hashTree>
-          <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="UC06_05_Выход">
+          <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="UC06_05_Выход" enabled="true">
             <boolProp name="TransactionController.includeTimers">false</boolProp>
           </TransactionController>
           <hashTree>
@@ -6419,7 +6421,7 @@ vars.put(&quot;cgifields_list&quot;,cgifields);
               <hashTree/>
             </hashTree>
           </hashTree>
-          <TestAction guiclass="TestActionGui" testclass="TestAction" testname="pacing">
+          <TestAction guiclass="TestActionGui" testclass="TestAction" testname="pacing" enabled="true">
             <intProp name="ActionProcessor.action">1</intProp>
             <intProp name="ActionProcessor.target">0</intProp>
             <stringProp name="ActionProcessor.duration">0</stringProp>
@@ -6437,7 +6439,7 @@ vars.put(&quot;cgifields_list&quot;,cgifields);
           </hashTree>
         </hashTree>
       </hashTree>
-      <ProxyControl guiclass="ProxyControlGui" testclass="ProxyControl" testname="HTTP(S) Test Script Recorder">
+      <ProxyControl guiclass="ProxyControlGui" testclass="ProxyControl" testname="HTTP(S) Test Script Recorder" enabled="true">
         <stringProp name="ProxyControlGui.port">9999</stringProp>
         <collectionProp name="ProxyControlGui.exclude_list">
           <stringProp name="-2063843150">(?i).*\.(bmp|css|js|gif|ico|jpe?g|png|swf|woff|woff2)</stringProp>
@@ -7176,7 +7178,7 @@ vars.put(&quot;cgifields_list&quot;,cgifields);
         <stringProp name="filename"></stringProp>
       </ResultCollector>
       <hashTree/>
-      <kg.apc.jmeter.threads.SteppingThreadGroup guiclass="kg.apc.jmeter.threads.SteppingThreadGroupGui" testclass="kg.apc.jmeter.threads.SteppingThreadGroup" testname="max_perf">
+      <kg.apc.jmeter.threads.SteppingThreadGroup guiclass="kg.apc.jmeter.threads.SteppingThreadGroupGui" testclass="kg.apc.jmeter.threads.SteppingThreadGroup" testname="max_perf" enabled="false">
         <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
         <stringProp name="ThreadGroup.num_threads">50</stringProp>
         <stringProp name="Threads initial delay">0</stringProp>
@@ -7193,35 +7195,35 @@ vars.put(&quot;cgifields_list&quot;,cgifields);
         </elementProp>
       </kg.apc.jmeter.threads.SteppingThreadGroup>
       <hashTree>
-        <com.blazemeter.jmeter.control.WeightedSwitchController guiclass="com.blazemeter.jmeter.control.WeightedSwitchControllerGui" testclass="com.blazemeter.jmeter.control.WeightedSwitchController" testname="bzm - Weighted Switch Controller">
+        <com.blazemeter.jmeter.control.WeightedSwitchController guiclass="com.blazemeter.jmeter.control.WeightedSwitchControllerGui" testclass="com.blazemeter.jmeter.control.WeightedSwitchController" testname="bzm - Weighted Switch Controller" enabled="true">
           <boolProp name="IsRandomChoice">false</boolProp>
           <collectionProp name="Weights">
-            <collectionProp name="-385337517">
+            <collectionProp name="-1175448180">
               <stringProp name="1653224677">UC01_Логин</stringProp>
               <stringProp name="1567">10</stringProp>
               <stringProp name="3569038">true</stringProp>
             </collectionProp>
-            <collectionProp name="-679943218">
+            <collectionProp name="507790975">
               <stringProp name="2023867423">UC02_Поиск_билета_без_оплаты</stringProp>
               <stringProp name="1598">20</stringProp>
               <stringProp name="3569038">true</stringProp>
             </collectionProp>
-            <collectionProp name="1432890719">
+            <collectionProp name="-120324560">
               <stringProp name="-968344081">UC03_Покупка_билета</stringProp>
               <stringProp name="1629">30</stringProp>
               <stringProp name="3569038">true</stringProp>
             </collectionProp>
-            <collectionProp name="875188222">
+            <collectionProp name="8542481">
               <stringProp name="975207504">UC04_Просмотр_списка_путевых_листов</stringProp>
               <stringProp name="1567">10</stringProp>
               <stringProp name="3569038">true</stringProp>
             </collectionProp>
-            <collectionProp name="1417264073">
+            <collectionProp name="1179553725">
               <stringProp name="1918787290">UC05_Удаление_существующего_бронирования</stringProp>
               <stringProp name="1598">20</stringProp>
               <stringProp name="3569038">true</stringProp>
             </collectionProp>
-            <collectionProp name="-1520435198">
+            <collectionProp name="-626611475">
               <stringProp name="239754580">UC06_Регистрация_пользователя</stringProp>
               <stringProp name="1567">10</stringProp>
               <stringProp name="3569038">true</stringProp>
@@ -13522,7 +13524,7 @@ vars.put(&quot;cgifields_list&quot;,cgifields);
           </hashTree>
         </hashTree>
       </hashTree>
-      <kg.apc.jmeter.threads.SteppingThreadGroup guiclass="kg.apc.jmeter.threads.SteppingThreadGroupGui" testclass="kg.apc.jmeter.threads.SteppingThreadGroup" testname="max_perf_podtv">
+      <kg.apc.jmeter.threads.SteppingThreadGroup guiclass="kg.apc.jmeter.threads.SteppingThreadGroupGui" testclass="kg.apc.jmeter.threads.SteppingThreadGroup" testname="max_perf_podtv" enabled="false">
         <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
         <stringProp name="ThreadGroup.num_threads">40</stringProp>
         <stringProp name="Threads initial delay">0</stringProp>
@@ -13539,35 +13541,35 @@ vars.put(&quot;cgifields_list&quot;,cgifields);
         </elementProp>
       </kg.apc.jmeter.threads.SteppingThreadGroup>
       <hashTree>
-        <com.blazemeter.jmeter.control.WeightedSwitchController guiclass="com.blazemeter.jmeter.control.WeightedSwitchControllerGui" testclass="com.blazemeter.jmeter.control.WeightedSwitchController" testname="bzm - Weighted Switch Controller">
+        <com.blazemeter.jmeter.control.WeightedSwitchController guiclass="com.blazemeter.jmeter.control.WeightedSwitchControllerGui" testclass="com.blazemeter.jmeter.control.WeightedSwitchController" testname="bzm - Weighted Switch Controller" enabled="true">
           <boolProp name="IsRandomChoice">false</boolProp>
           <collectionProp name="Weights">
-            <collectionProp name="-385337517">
+            <collectionProp name="-1175448180">
               <stringProp name="1653224677">UC01_Логин</stringProp>
               <stringProp name="1567">10</stringProp>
               <stringProp name="3569038">true</stringProp>
             </collectionProp>
-            <collectionProp name="-679943218">
+            <collectionProp name="507790975">
               <stringProp name="2023867423">UC02_Поиск_билета_без_оплаты</stringProp>
               <stringProp name="1598">20</stringProp>
               <stringProp name="3569038">true</stringProp>
             </collectionProp>
-            <collectionProp name="1432890719">
+            <collectionProp name="-120324560">
               <stringProp name="-968344081">UC03_Покупка_билета</stringProp>
               <stringProp name="1629">30</stringProp>
               <stringProp name="3569038">true</stringProp>
             </collectionProp>
-            <collectionProp name="875188222">
+            <collectionProp name="8542481">
               <stringProp name="975207504">UC04_Просмотр_списка_путевых_листов</stringProp>
               <stringProp name="1567">10</stringProp>
               <stringProp name="3569038">true</stringProp>
             </collectionProp>
-            <collectionProp name="1417264073">
+            <collectionProp name="1179553725">
               <stringProp name="1918787290">UC05_Удаление_существующего_бронирования</stringProp>
               <stringProp name="1598">20</stringProp>
               <stringProp name="3569038">true</stringProp>
             </collectionProp>
-            <collectionProp name="-1520435198">
+            <collectionProp name="-626611475">
               <stringProp name="239754580">UC06_Регистрация_пользователя</stringProp>
               <stringProp name="1567">10</stringProp>
               <stringProp name="3569038">true</stringProp>
